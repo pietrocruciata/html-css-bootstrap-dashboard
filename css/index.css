@@ -1,0 +1,38 @@
+/*RESET*/
+ul,
+li,
+menu{
+    list-style: none;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+/*LAYOUT*/
+.w-60{
+    width: 60px;
+}
+
+
+/*COLORS*/
+.orange-bell{
+    color: orange;
+}
+.c-current{
+    color: currentColor;
+}
+.c-white{
+    color: white;
+}
+
+
+
+
