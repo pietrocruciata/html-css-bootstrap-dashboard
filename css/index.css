@@ -15,10 +15,30 @@ img{
     max-width: 100%;
 }
 
+.a-style{
+    text-decoration: none;
+    color: currentColor;
+}
+
 
 /*LAYOUT*/
 .w-60{
     width: 60px;
+}
+
+.container-side-bar{
+    background-image: url(../img/sidebar-bg.png);
+    background-color: rgb(12, 2, 61);
+    width: 100px;
+    height: 100%;
+    display: flex;
+    flex-shrink: 0;
+}
+
+#app{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -32,7 +52,15 @@ img{
 .c-white{
     color: white;
 }
-
+.bg-blue{
+    background-color: rgb(4, 4, 144);
+}
+/*MEDIA QUERYS*/
+@media (min-width:992px){
+    .container-side-bar{
+        width: 210px;
+    }
+}
 
 
 
