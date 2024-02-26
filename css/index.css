@@ -41,6 +41,9 @@ img{
     flex-direction: column;
 }
 
+.w-left{
+    width: 60%;
+}
 
 /*COLORS*/
 .orange-bell{
