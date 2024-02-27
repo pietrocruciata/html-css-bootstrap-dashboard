@@ -49,6 +49,11 @@ img {
     height: 70px;
 }
 
+.cursor :hover{
+    background-color: rgb(203, 203, 203);
+    padding: 5px;
+    transition: 300ms;
+}
 
 /*COLORS*/
 .orange-bell {

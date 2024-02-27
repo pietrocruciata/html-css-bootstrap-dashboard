@@ -38,7 +38,16 @@
                                         class="fa-solid fa-question"></i></a></li>
                             <li class="d-none d-lg-flex"> <a href="#" class="c-current "><i
                                         class="fa-solid fa-ellipsis-vertical"></i></a></li>
-                            <li> <a href="#"><i class="fa-solid fa-bell orange-bell fs-5"></i></a></li>
+                            <div class="dropdown mt-3">
+                                <button class="btn" type="button" data-bs-toggle="dropdown">
+                                    <a href="#"><i class="fa-solid fa-bell orange-bell fs-5"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
                         </ul>
 
 
@@ -61,21 +70,33 @@
                     <div class="row">
                         <div class="col d-flex ">
                             <ul class="d-flex flex-column fs-5 gap-2 p-3 align-items-center">
-                                <li class="d-flex gap-4 align-items-center">
-                                    <i class="fa-solid fa-house"></i>
-                                    <div class="d-none d-lg-flex"><a href="" class="a-style">Home</a></div>
+                                <li class="d-flex gap-4 align-items-center cursor">
+                                    <div >
+                                        <a href="" class="a-style"><i
+                                                class="fa-solid fa-house"></i>
+                                            <span class="d-none d-lg-inline-block">Home</span></a>
+                                    </div>
                                 </li>
-                                <li class="d-flex gap-4 align-items-center">
-                                    <i class="fa-solid fa-chart-simple"></i>
-                                    <div class="d-none d-lg-flex"><a href="" class="a-style">Stats</a></div>
+                                <li class="d-flex gap-4 align-items-center cursor">
+                                    <div >
+                                        <a href="" class="a-style">
+                                            <i class="fa-solid fa-chart-simple"></i>
+                                           <span class="d-none d-lg-inline-block">Stats</span> </a>
+                                    </div>
                                 </li>
-                                <li class="d-flex gap-4 align-items-center">
-                                    <i class="fa-solid fa-signal"></i>
-                                    <div class="d-none d-lg-flex"><a href="" class="a-style">Signals</a></div>
+                                <li class="d-flex gap-4 align-items-center cursor">
+                                    <div >
+                                        <a href="" class="a-style">
+                                        <i class="fa-solid fa-signal"></i>
+                                        <span class="d-none d-lg-inline-block">Signals</span></a>
+                                    </div>
                                 </li>
-                                <li class="d-flex gap-4 align-items-center mt-auto">
-                                    <i class="fa-solid fa-gear"></i>
-                                    <div class="d-none d-lg-flex"><a href="" class="a-style">Admin</a></div>
+                                <li class="d-flex gap-4 align-items-center mt-auto cursor">
+                                    <div >
+                                        <a href="" class="a-style">
+                                         <i class="fa-solid fa-gear"></i>
+                                    <span class="d-none d-lg-inline-block">Admin</span></a>
+                                </div>
                                 </li>
                             </ul>
                         </div>
@@ -86,14 +107,95 @@
 
             <!-- BODY SECTION -->
             <section class="flex-grow-1">
-                <div class="container-body bg-primary">
+                <div class="container-body ">
                     <div class="row g-0">
 
-                        <!-- BLUE BAR -->
-                        <div class="col  c-white p-3 d-md-none">
-                            <div class="fs-2">
-                                <a href="#" class="a-style">Nuovo studente <span
-                                        class="border rounded p-1 ms-3">+</span></a>
+                        <!-- BLUE BAR PHONE-->
+                        <div class="col  c-white p-3 d-md-none bg-primary">
+                            <div class="fs-5">
+                                <a class="btn btn-primary fs-2" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                    role="button" aria-controls="offcanvasExample">
+                                    Nuovo utente <span class="btn btn-primary border rounded p-1 ms-3">+</span>
+                                </a>
+
+
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
+                                    aria-labelledby="offcanvasExampleLabel">
+                                    <div class="offcanvas-header">
+                                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Inserisci un nuovo
+                                            studente</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <div>
+                                            <form class="row g-3">
+                                                <div class="col-md-4">
+                                                    <label for="validationDefault01" class="form-label">First
+                                                        name</label>
+                                                    <input type="text" class="form-control" id="validationDefault01"
+                                                        value="" required>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="validationDefault02" class="form-label">Last
+                                                        name</label>
+                                                    <input type="text" class="form-control" id="validationDefault02"
+                                                        value="" required>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="validationDefaultUsername"
+                                                        class="form-label">E-mail</label>
+                                                    <div class="input-group">
+                                                        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                                        <input type="text" class="form-control"
+                                                            id="validationDefaultUsername"
+                                                            aria-describedby="inputGroupPrepend2" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="validationDefault03" class="form-label">City</label>
+                                                    <input type="text" class="form-control" id="validationDefault03"
+                                                        required>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="validationDefault04" class="form-label">State</label>
+                                                    <select class="form-select" id="validationDefault04" required>
+                                                        <option selected disabled value="">italy</option>
+                                                        <option>spain</option>
+                                                        <option>germany</option>
+
+
+                                                    </select>
+                                                </div>
+                                                <label for="inputPassword5" class="form-label">Password</label>
+                                                <input type="password" id="inputPassword5" class="form-control"
+                                                    aria-describedby="passwordHelpBlock">
+                                                <div id="passwordHelpBlock" class="form-text">
+                                                    Your password must be 8-20 characters long, contain letters and
+                                                    numbers, and must not contain spaces, special characters, or emoji.
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="invalidCheck2" required>
+                                                        <label class="form-check-label" for="invalidCheck2">
+                                                            Agree to terms and conditions
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+
+                                                </div>
+                                            </form>
+                                            <div class="mt-2">
+                                                <button type="button" class="btn btn-primary">Salva</button>
+                                                <button type="button" class="btn btn-warning">Svuota</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="fs-1 mt-3">
                                 Boolean <span class="fs-5 bg-blue rounded-pill p-1 ">Piano blaze</span>
@@ -112,6 +214,8 @@
 
                         </div>
 
+                        <!-- BLUE BAR >= DESKTOP -->
+
                         <div class="col-4 col-lg-6 bg-primary c-white p-2 d-none d-md-flex flex-column">
                             <div class="fs-4 mt-3">
                                 Boolean <span class="fs-6 bg-blue rounded-pill p-1 ">Piano blaze</span>
@@ -128,9 +232,6 @@
                                 <div class="fs-6 bg-blue rounded-pill p-1 d-none d-lg-flex">Boolean blog
                                     app</div>
                             </div>
-
-
-
                         </div>
 
                         <div
@@ -146,222 +247,306 @@
                         <div
                             class="col-4 col-lg-3 bg-primary c-white p-3 d-none d-md-flex flex-wrap align-items-center">
                             <div class="fs-5">
-                                <a href="#" class="a-style">Nuovo studente <span
-                                        class="border rounded p-1 ms-2">+</span></a>
+                                <a class="btn btn-primary " data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                    role="button" aria-controls="offcanvasExample">
+                                    Nuovo utente <span class="btn btn-primary border rounded p-1 ms-3">+</span>
+                                </a>
+                                
+
+
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
+                                    aria-labelledby="offcanvasExampleLabel">
+                                    <div class="offcanvas-header">
+                                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Inserisci un nuovo
+                                            studente</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <div>
+                                            <form class="row g-3">
+                                                <div class="col-md-4">
+                                                    <label for="validationDefault01" class="form-label">First
+                                                        name</label>
+                                                    <input type="text" class="form-control" id="validationDefault01"
+                                                        value="" required>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="validationDefault02" class="form-label">Last
+                                                        name</label>
+                                                    <input type="text" class="form-control" id="validationDefault02"
+                                                        value="" required>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="validationDefaultUsername"
+                                                        class="form-label">E-mail</label>
+                                                    <div class="input-group">
+                                                        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                                        <input type="text" class="form-control"
+                                                            id="validationDefaultUsername"
+                                                            aria-describedby="inputGroupPrepend2" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="validationDefault03" class="form-label">City</label>
+                                                    <input type="text" class="form-control" id="validationDefault03"
+                                                        required>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="validationDefault04" class="form-label">State</label>
+                                                    <select class="form-select" id="validationDefault04" required>
+                                                        <option selected disabled value="">italy</option>
+                                                        <option>spain</option>
+                                                        <option>germany</option>
+
+
+                                                    </select>
+                                                </div>
+                                                <label for="inputPassword5" class="form-label">Password</label>
+                                                <input type="password" id="inputPassword5" class="form-control"
+                                                    aria-describedby="passwordHelpBlock">
+                                                <div id="passwordHelpBlock" class="form-text">
+                                                    Your password must be 8-20 characters long, contain letters and
+                                                    numbers, and must not contain spaces, special characters, or emoji.
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="invalidCheck2" required>
+                                                        <label class="form-check-label" for="invalidCheck2">
+                                                            Agree to terms and conditions
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+
+                                                </div>
+                                            </form>
+                                            <div class="mt-2">
+                                                <button type="button" class="btn btn-primary">Salva</button>
+                                                <button type="button" class="btn btn-warning">Svuota</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- CENTRAL SECTION -->
+                    <!-- CENTRAL SECTION -->
 
-                <div class="container-fluid">
-                    <div class="row">
+                    <div class="container-fluid">
+                        <div class="row">
 
-                        <div class=" col-lg-8 mt-2">
-                            <div class="card">
-                                <div class="card-header">
-                                    <strong>Prossime classi</strong>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item d-flex gap-5 ">
-                                        nome
-                                        <span class="ms-auto pe-3 d-none d-md-flex">Data di inizio</span>
-                                        <span class="pe-3">ROI</span>
-                                        <span class="pe-3">Stato</span>
-                                        <span class="pe-3">Azioni</span>
-                                    </li>
-                                    <li class="list-group-item d-flex gap-5">
-                                        <span class="pe-2"><i
-                                                class="fa-solid fa-code c-white bg-danger rounded-circle p-2"></i>
-                                            Classe
-                                            76</span>
-                                        <span class="ms-auto pe-2 d-none d-md-flex">Da15 Feb 2021</span>
-                                        <span class="pe-3">20%</span>
-                                        <span class="badge text-bg-success pe-2">Done</span>
-                                        <span class="pe-2"><i
-                                                class="bi bi-pencil-fill border border-dark-subtle p-1 me-1 rounded"></i><i
-                                                class="bi bi-trash-fill border border-dark-subtle p-1 me-0 rounded"></i></span>
-                                    </li>
-                                    <li class="list-group-item d-flex gap-5">
-                                        <span class="pe-2"><i
-                                                class="fa-solid fa-code c-white bg-danger rounded-circle p-2"></i>
-                                            Classe
-                                            76</span>
-                                        <span class="ms-auto pe-2 d-none d-md-flex">Da15 Feb 2021</span>
-                                        <span class="pe-3">20%</span>
-                                        <span class="badge text-bg-success pe-2">Done</span>
-                                        <span class="pe-2"><i
-                                                class="bi bi-pencil-fill border border-dark-subtle p-1 me-1 rounded"></i><i
-                                                class="bi bi-trash-fill border border-dark-subtle p-1 me-0 rounded"></i></span>
-                                    </li>
-                                    <li class="list-group-item d-flex gap-5">
-                                        <span class="pe-2"><i
-                                                class="fa-solid fa-code c-white bg-danger rounded-circle p-2"></i>
-                                            Classe
-                                            76</span>
-                                        <span class="ms-auto pe-2 d-none d-md-flex">Da15 Feb 2021</span>
-                                        <span class="pe-3">20%</span>
-                                        <span class="badge text-bg-warning ">process</span>
-                                        <span class="pe-2"><i
-                                                class="bi bi-pencil-fill border border-dark-subtle p-1 me-1 rounded"></i><i
-                                                class="bi bi-trash-fill border border-dark-subtle p-1 me-0 rounded"></i></span>
-                                    </li>
-                                    <li class="list-group-item d-flex gap-5">
-                                        <span class="pe-2"><i
-                                                class="fa-solid fa-code c-white bg-danger rounded-circle p-2"></i>
-                                            Classe
-                                            76</span>
-                                        <span class="ms-auto pe-2 d-none d-md-flex">Da15 Feb 2021</span>
-                                        <span class="pe-3">20%</span>
-                                        <span class="badge text-bg-success pe-2">Done</span>
-                                        <span class="pe-2"><i
-                                                class="bi bi-pencil-fill border border-dark-subtle p-1 me-1 rounded"></i><i
-                                                class="bi bi-trash-fill border border-dark-subtle p-1 me-0 rounded"></i></span>
-                                    </li>
-                                    <li class="list-group-item d-flex gap-5">
-                                        <span class="pe-2"><i
-                                                class="fa-solid fa-code c-white bg-danger rounded-circle p-2"></i>
-                                            Classe
-                                            76</span>
-                                        <span class="ms-auto pe-2 d-none d-md-flex">Da15 Feb 2021</span>
-                                        <span class="pe-3">20%</span>
-                                        <span class="badge text-bg-danger">Danger</span>
-                                        <span class="pe-2"><i
-                                                class="bi bi-pencil-fill border border-dark-subtle p-1 me-1 rounded"></i><i
-                                                class="bi bi-trash-fill border border-dark-subtle p-1 me-0 rounded"></i></span>
-                                    </li>
-                                    <li class="list-group-item d-flex gap-5">
-                                        <span class="pe-2"><i
-                                                class="fa-solid fa-code c-white bg-danger rounded-circle p-2"></i>
-                                            Classe
-                                            76</span>
-                                        <span class="ms-auto pe-2 d-none d-md-flex">Da15 Feb 2021</span>
-                                        <span class="pe-3">20%</span>
-                                        <span class="badge text-bg-success pe-2">Done</span>
-                                        <span class="pe-2"><i
-                                                class="bi bi-pencil-fill border border-dark-subtle p-1 me-1 rounded"></i><i
-                                                class="bi bi-trash-fill border border-dark-subtle p-1 me-0 rounded"></i></span>
-                                    </li>
-                                    <li class="list-group-item d-flex gap-5">
-                                        <span class="pe-2"><i
-                                                class="fa-solid fa-code c-white bg-danger rounded-circle p-2"></i>
-                                            Classe
-                                            76</span>
-                                        <span class="ms-auto pe-2 d-none d-md-flex">Da15 Feb 2021</span>
-                                        <span class="pe-3">20%</span>
-                                        <span class="badge text-bg-danger">Danger</span>
-                                        <span class="pe-2"><i
-                                                class="bi bi-pencil-fill border border-dark-subtle p-1 me-1 rounded"></i><i
-                                                class="bi bi-trash-fill border border-dark-subtle p-1 me-0 rounded"></i></span>
-                                    </li>
-                                </ul>
-
-                            </div>
-                            <!-- FAQ -->
-                            <div class="card mt-2">
-                                <div class="accordion  border rounded " id="accordionPanelsStayOpenExample">
-                                    <div class="bg-secondary-subtle p-2"><strong>F.A.Q</strong></div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                                                aria-controls="panelsStayOpen-collapseOne">
-                                                Come aggiungere un nuovo studente?
-                                            </button>
-                                        </h2>
-                                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                                            <div class="accordion-body">
-                                                <strong>This is the first item's accordion body.</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
-                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                                Come posso accedere alle informazioni del mio account?
-                                            </button>
-                                        </h2>
-                                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                                            <div class="accordion-body">
-                                                <strong>This is the second item's accordion body.</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
-                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                                Posso usare questa dashboard da mobile?
-                                            </button>
-                                        </h2>
-                                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                                            <div class="accordion-body">
-                                                <strong>This is the third item's accordion body.</strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                            </div>
-                        </div>
-
-
-
-
-
-
-                        <!-- TODO -->
-                        <div class="col-lg-4">
-                            <div class="card mt-2 d-flex">
-                                <div class="card-header">
-                                    <strong>Todo</strong>
-                                </div>
-                                <div class="p-2">
-                                    <ul class="p-1 mb-0 border m-2 rounded">
-                                        <li class="border-bottom"><input type="checkbox" class="me-1">kickoff nuove
-                                            classi
-                                        </li>
-                                        <li class="border-bottom"><input type="checkbox" class="me-1">kickoff nuove
-                                            classi</li>
-                                        <li><input type="checkbox" class="me-1">kickoff nuove classi</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- REPORT -->
-                            <div class="card mt-2">
-                                <div class="border m-3">
-                                    <img src="./img/stats.jpeg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Utenti attivi</h5>
-                                        <p class="card-text">Lista degli utenti attivi in piattaforma nell'ultimo mese
-                                        </p>
+                            <div class=" col-lg-8 mt-2">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Prossime classi</strong>
                                     </div>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">Gennaio: 1200</li>
-                                        <li class="list-group-item">Febbraio: 800</li>
-                                        <li class="list-group-item">Marzo: 1500</li>
+                                        <li class="list-group-item d-flex gap-5 ">
+                                            nome
+                                            <span class="ms-auto pe-3 d-none d-md-flex">Data di inizio</span>
+                                            <span class="pe-3">ROI</span>
+                                            <span class="pe-3">Stato</span>
+                                            <span class="pe-3">Azioni</span>
+                                        </li>
+                                        <li class="list-group-item d-flex gap-5">
+                                            <span class="pe-2"><i
+                                                    class="fa-solid fa-code c-white bg-danger rounded-circle p-2"></i>
+                                                Classe
+                                                76</span>
+                                            <span class="ms-auto pe-2 d-none d-md-flex">Da15 Feb 2021</span>
+                                            <span class="pe-3">20%</span>
+                                            <span class="badge text-bg-success pe-2">Done</span>
+                                            <span class="pe-2"><i
+                                                    class="bi bi-pencil-fill border border-dark-subtle p-1 me-1 rounded"></i><i
+                                                    class="bi bi-trash-fill border border-dark-subtle p-1 me-0 rounded"></i></span>
+                                        </li>
+                                        <li class="list-group-item d-flex gap-5">
+                                            <span class="pe-2"><i
+                                                    class="fa-solid fa-code c-white bg-danger rounded-circle p-2"></i>
+                                                Classe
+                                                76</span>
+                                            <span class="ms-auto pe-2 d-none d-md-flex">Da15 Feb 2021</span>
+                                            <span class="pe-3">20%</span>
+                                            <span class="badge text-bg-success pe-2">Done</span>
+                                            <span class="pe-2"><i
+                                                    class="bi bi-pencil-fill border border-dark-subtle p-1 me-1 rounded"></i><i
+                                                    class="bi bi-trash-fill border border-dark-subtle p-1 me-0 rounded"></i></span>
+                                        </li>
+                                        <li class="list-group-item d-flex gap-5">
+                                            <span class="pe-2"><i
+                                                    class="fa-solid fa-code c-white bg-danger rounded-circle p-2"></i>
+                                                Classe
+                                                76</span>
+                                            <span class="ms-auto pe-2 d-none d-md-flex">Da15 Feb 2021</span>
+                                            <span class="pe-3">20%</span>
+                                            <span class="badge text-bg-warning ">process</span>
+                                            <span class="pe-2"><i
+                                                    class="bi bi-pencil-fill border border-dark-subtle p-1 me-1 rounded"></i><i
+                                                    class="bi bi-trash-fill border border-dark-subtle p-1 me-0 rounded"></i></span>
+                                        </li>
+                                        <li class="list-group-item d-flex gap-5">
+                                            <span class="pe-2"><i
+                                                    class="fa-solid fa-code c-white bg-danger rounded-circle p-2"></i>
+                                                Classe
+                                                76</span>
+                                            <span class="ms-auto pe-2 d-none d-md-flex">Da15 Feb 2021</span>
+                                            <span class="pe-3">20%</span>
+                                            <span class="badge text-bg-success pe-2">Done</span>
+                                            <span class="pe-2"><i
+                                                    class="bi bi-pencil-fill border border-dark-subtle p-1 me-1 rounded"></i><i
+                                                    class="bi bi-trash-fill border border-dark-subtle p-1 me-0 rounded"></i></span>
+                                        </li>
+                                        <li class="list-group-item d-flex gap-5">
+                                            <span class="pe-2"><i
+                                                    class="fa-solid fa-code c-white bg-danger rounded-circle p-2"></i>
+                                                Classe
+                                                76</span>
+                                            <span class="ms-auto pe-2 d-none d-md-flex">Da15 Feb 2021</span>
+                                            <span class="pe-3">20%</span>
+                                            <span class="badge text-bg-danger">Danger</span>
+                                            <span class="pe-2"><i
+                                                    class="bi bi-pencil-fill border border-dark-subtle p-1 me-1 rounded"></i><i
+                                                    class="bi bi-trash-fill border border-dark-subtle p-1 me-0 rounded"></i></span>
+                                        </li>
+                                        <li class="list-group-item d-flex gap-5">
+                                            <span class="pe-2"><i
+                                                    class="fa-solid fa-code c-white bg-danger rounded-circle p-2"></i>
+                                                Classe
+                                                76</span>
+                                            <span class="ms-auto pe-2 d-none d-md-flex">Da15 Feb 2021</span>
+                                            <span class="pe-3">20%</span>
+                                            <span class="badge text-bg-success pe-2">Done</span>
+                                            <span class="pe-2"><i
+                                                    class="bi bi-pencil-fill border border-dark-subtle p-1 me-1 rounded"></i><i
+                                                    class="bi bi-trash-fill border border-dark-subtle p-1 me-0 rounded"></i></span>
+                                        </li>
+                                        <li class="list-group-item d-flex gap-5">
+                                            <span class="pe-2"><i
+                                                    class="fa-solid fa-code c-white bg-danger rounded-circle p-2"></i>
+                                                Classe
+                                                76</span>
+                                            <span class="ms-auto pe-2 d-none d-md-flex">Da15 Feb 2021</span>
+                                            <span class="pe-3">20%</span>
+                                            <span class="badge text-bg-danger">Danger</span>
+                                            <span class="pe-2"><i
+                                                    class="bi bi-pencil-fill border border-dark-subtle p-1 me-1 rounded"></i><i
+                                                    class="bi bi-trash-fill border border-dark-subtle p-1 me-0 rounded"></i></span>
+                                        </li>
                                     </ul>
-                                    <div class="card-body">
-                                        <a href="#" class="card-link">Viausalizza report approfondito</a>
-                                    </div>
-                                </div>
 
+                                </div>
+                                <!-- FAQ -->
+                                <div class="card mt-2">
+                                    <div class="accordion  border rounded " id="accordionPanelsStayOpenExample">
+                                        <div class="bg-secondary-subtle p-2"><strong>F.A.Q</strong></div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                                    aria-controls="panelsStayOpen-collapseOne">
+                                                    Come aggiungere un nuovo studente?
+                                                </button>
+                                            </h2>
+                                            <div id="panelsStayOpen-collapseOne"
+                                                class="accordion-collapse collapse show">
+                                                <div class="accordion-body">
+                                                    <strong>Fai click sul + in alto sulla sezione blu.*</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                                    aria-controls="panelsStayOpen-collapseTwo">
+                                                    Come posso accedere alle informazioni del mio account?
+                                                </button>
+                                            </h2>
+                                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                                <div class="accordion-body">
+                                                   <strong>Clicca sull'icone della campanella</strong> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                                    aria-controls="panelsStayOpen-collapseThree">
+                                                    Posso usare questa dashboard da mobile?
+                                                </button>
+                                            </h2>
+                                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                                <div class="accordion-body">
+                                                    <strong>Certo! questa è una dashboard resposive , puoi usarla su ogni dispositivo!</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
                             </div>
 
 
 
 
-                        </div>
 
+
+                            <!-- TODO -->
+                            <div class="col-lg-4">
+                                <div class="card mt-2 d-flex">
+                                    <div class="card-header">
+                                        <strong>Todo</strong>
+                                    </div>
+                                    <div class="p-2">
+                                        <ul class="p-1 mb-0 border m-2 rounded">
+                                            <li class="border-bottom"><input type="checkbox" class="me-1">kickoff nuove
+                                                classi
+                                            </li>
+                                            <li class="border-bottom"><input type="checkbox" class="me-1">Lezione su Bootstrap 5 in classe #121</li>
+                                            <li><input type="checkbox" class="me-1">Controllare username github studenti</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- REPORT -->
+                                <div class="card mt-2">
+                                    <div class="border m-3">
+                                        <img src="./img/stats.jpeg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Utenti attivi</h5>
+                                            <p class="card-text">Lista degli utenti attivi in piattaforma nell'ultimo
+                                                mese
+                                            </p>
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">Gennaio: 1200</li>
+                                            <li class="list-group-item">Febbraio: 800</li>
+                                            <li class="list-group-item">Marzo: 1500</li>
+                                        </ul>
+                                        <div class="card-body">
+                                            <a href="#" class="card-link">Viausalizza report approfondito</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+
+                            </div>
+
+                        </div>
                     </div>
-                </div>
 
             </section>
 
