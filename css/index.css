@@ -1,32 +1,32 @@
 /*RESET*/
 ul,
 li,
-menu{
+menu {
     list-style: none;
 }
 
-body{
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
-.a-style{
+.a-style {
     text-decoration: none;
     color: currentColor;
 }
 
 
 /*LAYOUT*/
-.w-60{
-    width: 60px;
+.img-size {
+    width: 50px;
 }
 
-.container-side-bar{
+.container-side-bar {
     background-image: url(../img/sidebar-bg.png);
     background-color: rgb(12, 2, 61);
     width: 100px;
@@ -35,35 +35,41 @@ img{
     flex-shrink: 0;
 }
 
-#app{
+#app {
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-.w-left{
+.w-left {
     width: 60%;
 }
 
+.h-70 {
+    height: 70px;
+}
+
+
 /*COLORS*/
-.orange-bell{
+.orange-bell {
     color: orange;
 }
-.c-current{
+
+.c-current {
     color: currentColor;
 }
-.c-white{
+
+.c-white {
     color: white;
 }
-.bg-blue{
+
+.bg-blue {
     background-color: rgb(4, 4, 144);
 }
+
 /*MEDIA QUERYS*/
-@media (min-width:992px){
-    .container-side-bar{
-        width: 210px;
+@media (min-width:992px) {
+    .container-side-bar {
+        width: 150px;
     }
 }
-
-
-
