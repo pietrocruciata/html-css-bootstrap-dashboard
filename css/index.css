@@ -49,14 +49,22 @@ img {
     height: 70px;
 }
 
-.cursor :hover{
+.cursor :hover {
     background-color: rgb(203, 203, 203);
     padding: 5px;
     transition: 300ms;
 }
 
-.h-fit-content{
+.h-fit-content {
     height: fit-content;
+}
+
+.w-90 {
+    width: 90px;
+}
+
+.fs-11 {
+    font-size: 11px;
 }
 
 /*COLORS*/
