@@ -55,6 +55,10 @@ img {
     transition: 300ms;
 }
 
+.h-fit-content{
+    height: fit-content;
+}
+
 /*COLORS*/
 .orange-bell {
     color: orange;
